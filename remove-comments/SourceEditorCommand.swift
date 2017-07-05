@@ -18,7 +18,25 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
         print("Command Identifier : \(invocation.commandIdentifier)")
         
         if invocation.commandIdentifier.contains("TestHeader") {
+            var reachedEndOfHeader = false
+            var lastCommentLine = 0
+            let newHeader = "// Hello world, new header"
             
+            // Delete the header
+            while !reachedEndOfHeader {
+                let currentLine = invocation.buffer.lines[lastCommentLine] as! String
+                
+                if currentLine.hasPrefix("//") {
+                    invocation.buffer.lines[lastCommentLine] = ""
+                    lastCommentLine += 1
+                } else {
+                    reachedEndOfHeader = true
+                    lastCommentLine -= 1
+                }
+            }
+            
+            // Assign the new header
+            invocation.buffer.lines[0] = newHeader
         }
         
         completionHandler(nil)
