@@ -11,7 +11,35 @@
 		F218C3211F0CBA5300CF1867 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F218C3201F0CBA5300CF1867 /* ViewController.swift */; };
 		F218C3231F0CBA5300CF1867 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F218C3221F0CBA5300CF1867 /* Assets.xcassets */; };
 		F218C3261F0CBA5300CF1867 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F218C3241F0CBA5300CF1867 /* Main.storyboard */; };
+		F26EA2301F0CF4500086C8BE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F26EA22F1F0CF4500086C8BE /* Cocoa.framework */; };
+		F26EA2351F0CF4500086C8BE /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26EA2341F0CF4500086C8BE /* SourceEditorExtension.swift */; };
+		F26EA2371F0CF4500086C8BE /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = F26EA2361F0CF4500086C8BE /* SourceEditorCommand.swift */; };
+		F26EA23B1F0CF4500086C8BE /* remove-comments.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F26EA22D1F0CF4500086C8BE /* remove-comments.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F26EA2391F0CF4500086C8BE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F218C3131F0CBA5300CF1867 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F26EA22C1F0CF4500086C8BE;
+			remoteInfo = "remove-comments";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F26EA23F1F0CF4510086C8BE /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F26EA23B1F0CF4500086C8BE /* remove-comments.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F218C31B1F0CBA5300CF1867 /* xcode-extension-remove-comment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "xcode-extension-remove-comment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,6 +48,12 @@
 		F218C3221F0CBA5300CF1867 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F218C3251F0CBA5300CF1867 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F218C3271F0CBA5300CF1867 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F26EA22D1F0CF4500086C8BE /* remove-comments.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "remove-comments.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F26EA22F1F0CF4500086C8BE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		F26EA2331F0CF4500086C8BE /* remove_comments.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = remove_comments.entitlements; sourceTree = "<group>"; };
+		F26EA2341F0CF4500086C8BE /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
+		F26EA2361F0CF4500086C8BE /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
+		F26EA2381F0CF4500086C8BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +64,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F26EA22A1F0CF4500086C8BE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F26EA2301F0CF4500086C8BE /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -37,6 +79,8 @@
 			isa = PBXGroup;
 			children = (
 				F218C31D1F0CBA5300CF1867 /* xcode-extension-remove-comment */,
+				F26EA2311F0CF4500086C8BE /* remove-comments */,
+				F26EA22E1F0CF4500086C8BE /* Frameworks */,
 				F218C31C1F0CBA5300CF1867 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -45,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				F218C31B1F0CBA5300CF1867 /* xcode-extension-remove-comment.app */,
+				F26EA22D1F0CF4500086C8BE /* remove-comments.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,6 +106,33 @@
 			path = "xcode-extension-remove-comment";
 			sourceTree = "<group>";
 		};
+		F26EA22E1F0CF4500086C8BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F26EA22F1F0CF4500086C8BE /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F26EA2311F0CF4500086C8BE /* remove-comments */ = {
+			isa = PBXGroup;
+			children = (
+				F26EA2341F0CF4500086C8BE /* SourceEditorExtension.swift */,
+				F26EA2361F0CF4500086C8BE /* SourceEditorCommand.swift */,
+				F26EA2381F0CF4500086C8BE /* Info.plist */,
+				F26EA2321F0CF4500086C8BE /* Supporting Files */,
+			);
+			path = "remove-comments";
+			sourceTree = "<group>";
+		};
+		F26EA2321F0CF4500086C8BE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F26EA2331F0CF4500086C8BE /* remove_comments.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,15 +143,34 @@
 				F218C3171F0CBA5300CF1867 /* Sources */,
 				F218C3181F0CBA5300CF1867 /* Frameworks */,
 				F218C3191F0CBA5300CF1867 /* Resources */,
+				F26EA23F1F0CF4510086C8BE /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F26EA23A1F0CF4500086C8BE /* PBXTargetDependency */,
 			);
 			name = "xcode-extension-remove-comment";
 			productName = "xcode-extension-remove-comment";
 			productReference = F218C31B1F0CBA5300CF1867 /* xcode-extension-remove-comment.app */;
 			productType = "com.apple.product-type.application";
+		};
+		F26EA22C1F0CF4500086C8BE /* remove-comments */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F26EA23E1F0CF4510086C8BE /* Build configuration list for PBXNativeTarget "remove-comments" */;
+			buildPhases = (
+				F26EA2291F0CF4500086C8BE /* Sources */,
+				F26EA22A1F0CF4500086C8BE /* Frameworks */,
+				F26EA22B1F0CF4500086C8BE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "remove-comments";
+			productName = "remove-comments";
+			productReference = F26EA22D1F0CF4500086C8BE /* remove-comments.appex */;
+			productType = "com.apple.product-type.xcode-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -92,6 +183,11 @@
 				ORGANIZATIONNAME = Sha;
 				TargetAttributes = {
 					F218C31A1F0CBA5300CF1867 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 5MSSM7WCB9;
+						ProvisioningStyle = Automatic;
+					};
+					F26EA22C1F0CF4500086C8BE = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 5MSSM7WCB9;
 						ProvisioningStyle = Automatic;
@@ -112,6 +208,7 @@
 			projectRoot = "";
 			targets = (
 				F218C31A1F0CBA5300CF1867 /* xcode-extension-remove-comment */,
+				F26EA22C1F0CF4500086C8BE /* remove-comments */,
 			);
 		};
 /* End PBXProject section */
@@ -123,6 +220,13 @@
 			files = (
 				F218C3231F0CBA5300CF1867 /* Assets.xcassets in Resources */,
 				F218C3261F0CBA5300CF1867 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F26EA22B1F0CF4500086C8BE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +242,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F26EA2291F0CF4500086C8BE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F26EA2351F0CF4500086C8BE /* SourceEditorExtension.swift in Sources */,
+				F26EA2371F0CF4500086C8BE /* SourceEditorCommand.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F26EA23A1F0CF4500086C8BE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F26EA22C1F0CF4500086C8BE /* remove-comments */;
+			targetProxy = F26EA2391F0CF4500086C8BE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F218C3241F0CBA5300CF1867 /* Main.storyboard */ = {
@@ -247,13 +368,16 @@
 		F218C32B1F0CBA5300CF1867 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 5MSSM7WCB9;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "xcode-extension-remove-comment/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "info.shanaka.xcode-extension-remove-comment";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -261,13 +385,52 @@
 		F218C32C1F0CBA5300CF1867 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 5MSSM7WCB9;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "xcode-extension-remove-comment/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "info.shanaka.xcode-extension-remove-comment";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		F26EA23C1F0CF4500086C8BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "remove-comments/remove_comments.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5MSSM7WCB9;
+				INFOPLIST_FILE = "remove-comments/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "info.shanaka.xcode-extension-remove-comment.remove-comments";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		F26EA23D1F0CF4500086C8BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "remove-comments/remove_comments.entitlements";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 5MSSM7WCB9;
+				INFOPLIST_FILE = "remove-comments/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "info.shanaka.xcode-extension-remove-comment.remove-comments";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -289,6 +452,15 @@
 			buildConfigurations = (
 				F218C32B1F0CBA5300CF1867 /* Debug */,
 				F218C32C1F0CBA5300CF1867 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F26EA23E1F0CF4510086C8BE /* Build configuration list for PBXNativeTarget "remove-comments" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F26EA23C1F0CF4500086C8BE /* Debug */,
+				F26EA23D1F0CF4500086C8BE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

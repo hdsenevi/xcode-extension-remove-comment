@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>remove-comments.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>xcode-extension-remove-comment.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -13,6 +18,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>F218C31A1F0CBA5300CF1867</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F26EA22C1F0CF4500086C8BE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
