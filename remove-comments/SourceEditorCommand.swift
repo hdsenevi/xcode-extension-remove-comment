@@ -45,7 +45,35 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
         
         // Remove all comments command
         if invocation.commandIdentifier.contains("RemoveComments") {
+            let lines = invocation.buffer.lines
             
+            var commentLineStart = 0
+            var commentLineEnd = 0
+            
+            // Will hold the start index and the count of comments from start index
+            var removeArray = [(start: Int, count: Int)]();
+            
+            for (i, bufferLine) in lines.enumerated() {
+                let line = bufferLine as! String
+                if line.trimmingCharacters(in: .whitespaces).hasPrefix("//") {
+                    commentLineEnd = i
+                }
+                else {
+                    if commentLineStart != 0 && commentLineStart != commentLineEnd {
+                        
+                        // Since we need the count of commented lines, not to-line index
+                        removeArray.append((commentLineStart + 1, commentLineEnd - commentLineStart))
+                    }
+                    
+                    commentLineStart = i
+                    commentLineEnd = commentLineStart
+                }
+            }
+            
+            // Remove the actual comments
+            for removeElement in removeArray.reversed() {
+                lines.removeObjects(in: NSRange(location: removeElement.start, length: removeElement.count))
+            }
         }
         
         completionHandler(nil)
